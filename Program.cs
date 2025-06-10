@@ -14,7 +14,7 @@ namespace InfixBot
 
         static async Task Main(string[] args)
         {
-            botClient = new TelegramBotClient("YOUR_BOT_TOKEN_HERE"); // Replace with your bot token
+            botClient = new TelegramBotClient("7677634123:AAGD-PfEI7TkjG8tVqJMKrP_pXSpoNCDLg8"); // Replace with your bot token
             var me = await botClient.GetMeAsync();
             Console.WriteLine($"Bot started: @{me.Username}");
 
