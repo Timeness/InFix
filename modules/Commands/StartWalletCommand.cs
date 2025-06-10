@@ -1,10 +1,11 @@
+using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace InfixBot.modules.Commands
+namespace InfixBot.Core
 {
-    public static class StartWalletCommand
+    public class StartWalletCommand
     {
         public static async Task ExecuteAsync(ITelegramBotClient botClient, Message message)
         {
@@ -21,10 +22,10 @@ Your gateway to the Infix blockchain. Manage your INF tokens with ease.
 📜 /transaction {transactionHash} - View transaction details of specefic transactionHash
 ⛏️ /mine - Mine 10 INF daily
 🔗 /chain - View Infix blockchain info
-🧱 /block {blockIndex} - View block details
+🗱 /block {blockIndex} - View block details
 📊 /history - View your all transactions";
 
-            await botClient.SendTextMessageAsync(
+            await botClient.SendMessageAsync(
                 chatId: message.Chat.Id,
                 text: startWalletMessage,
                 parseMode: ParseMode.Markdown
